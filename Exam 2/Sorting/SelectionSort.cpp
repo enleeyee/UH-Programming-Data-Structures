@@ -7,20 +7,28 @@ void printArray(int myArray[], int size) {
     cout << endl;
 }
 
-void BubbleSort(int myArray[], int size) {
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (myArray[j] > myArray[j + 1]) {
-                int temp = myArray[j];
-                myArray[j] = myArray[j + 1];
-                myArray[j + 1] = temp;
+void Swap(int myArray[], int j, int k) {
+    if(j != k) {
+        int temp = myArray[j];
+        myArray[j] = myArray[k];
+        myArray[k] = temp;
+    }
+ }
+ 
+ void SelectionSort(int myArray[], int size) {
+    for (int i = 0; i < size - 1; ++i) {
+        int indexSmallest = i;
+        for (int j = i + 1; j < size; ++j) {
+            if ( myArray[j] < myArray[indexSmallest] ) {
+                indexSmallest = j;
             }
         }
-
+        Swap(myArray, i, indexSmallest);
+        
         cout << "At step " << i << " : ";
         printArray(myArray, size);
     }
-}
+ }
 
 int main() {
     const int ARRAY_SIZE = 10;
@@ -30,7 +38,7 @@ int main() {
 
     printArray(myArray, ARRAY_SIZE);
 
-    BubbleSort(myArray, ARRAY_SIZE);
+    SelectionSort(myArray, ARRAY_SIZE);
 
     cout << "Sorted array: ";
 
