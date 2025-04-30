@@ -20,7 +20,7 @@ public:
     void enqueue(int data, int priority) {
         Node* newNode = new Node(data, priority);
 
-        // Case 1: Empty list or new node has higher priority than the head
+        // Case 1: Empty list or new node has lower priority than the head
         if (!head || priority < head->priority) {
             newNode->next = head;
             head = newNode;
