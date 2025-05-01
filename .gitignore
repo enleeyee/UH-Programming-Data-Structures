@@ -1,2 +1,32 @@
 /.vscode
 .DS_Store
+
+# ignore build outputs and binaries
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+*.class
+
+# ignore build targets
+# Exam 1
+**/arraylist
+**/linkedlist
+**/doublylinkedlist
+**/circularlinkedlist
+
+# Exam 2
+
+# Exam 3
+**/bellmanford
+**/dijkstra
+**/floydwarshall
+**/kruskal
+**/prim
+**/toposort
+**/avl
+**/bst
+**/huffman
+**/graph
