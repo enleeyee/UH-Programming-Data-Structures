@@ -21,7 +21,7 @@ Examples include:
 
 ---
 
-## ▶️ How to Run a Program
+## How to Run a Program
 
 1. Navigate to the folder of the program you'd like to run. For example:
 
